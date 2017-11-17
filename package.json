@@ -1,0 +1,19 @@
+{
+    "name": "html2img",
+    "version": "0.0.1",
+    "description": "Generate a screenshot of the page with javascript.",
+    "author": "panricas <panfei909909@gmail.com>",
+    "keywords": [
+        "html2canvas",
+        "html2img"
+    ],
+    "license": "MIT",
+    "main": "./src/index.js",
+    "scripts": {
+    },
+    "dependencies": {
+        "html2canvas": "^0.5.0-alpha"
+    },
+    "devDependencies": {
+    }
+}
