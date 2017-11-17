@@ -1,6 +1,6 @@
 # html2screenshot
 Generate a screenshot of the page with javascript
-##Usage
+## Usage
 Install:
 ``` javascript
 npm install html2screenshot
@@ -18,22 +18,22 @@ html2screenshot(document.body, {
     // todo
 });
 ```
-##Parameters
-###html
+## Parameters
+### html
 `html` element you wanna screenshot.
-###options
+### options
 `options`  of screenshot.
-###cb
+### cb
 `callback` function, built-in parameters `imgUrl`.
-##Options
-###startX
+## Options
+### startX
 `startX` of the element you wanna screenshot, default 0.
-###startY
+### startY
 `startY` of the element you wanna screenshot, default 0.
-###background
+### background
 `background` of screenshot, default '#fff'.
-###imageType
+### imageType
 The type of screenshot, default 'png'.
-###imageQuality
+### imageQuality
 The quality of screenshot, default 1.0.
-##Examples
+## Examples
