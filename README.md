@@ -5,7 +5,7 @@ Install:
 ``` javascript
 npm install html2screenshot
 ```
-The html2img library utilizes Promises and expects them to be available in the global context.
+The html2screenshot library utilizes Promises and expects them to be available in the global context.
 ``` javascript
 // html2screenshot(html, options, cb)
 html2screenshot(document.body, {
