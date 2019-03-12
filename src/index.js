@@ -11,8 +11,10 @@ function html2img(dom, options, cb) {
     var imgUrl = '';
     var startX = options.startX || 0;
     var startY = options.startY || 0;
-    var canvasWidth = dom.offsetWidth;
-    var canvasHeight = dom.scrollHeight || dom.offsetHeight;
+    var domW = dom.offsetWidth;
+    var domH = dom.scrollHeight || dom.offsetHeight;
+    var canvasW = options.canvasW || domW;
+    var canvasH = options.canvasH || domH;
     var canvas2imgOptions = options.imageType ? {
         imageType: options.imageType,
         imageQuality: options.imageQuality
@@ -26,7 +28,7 @@ function html2img(dom, options, cb) {
         img.onload = () => {
             img.onload = null;
             var newCanvas = utils.img2canvas(
-                img, startX, startY, canvasWidth, canvasHeight);
+                img, startX, startY, domW, domH, 0, 0, canvasW, canvasH);
             imgUrl = utils.canvas2img(newCanvas, canvas2imgOptions).src;
 
             cb && cb(imgUrl);

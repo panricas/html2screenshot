@@ -8,31 +8,37 @@ module.exports = {
         var image = new Image();
         var imageType = 'png';
         var imageQuality = 1.0;
+        var dataURL = '';
 
         if (options && options.imageType === 'jpeg') {
             imageType = options.imageType;
             imageQuality = options.imageQuality || 1.0;
         }
 
-        image.src = canvas.toDataURL('image/' + imageType, imageQuality);
+        dataURL = canvas.toDataURL('image/' + imageType, imageQuality);
+        image.src = dataURL;
 
         return image;
     },
 
     /**
-     * img2canvas, convert img to canvas
-     * @param  {object} image  image
-     * @param  {number} startX startX of screenshot
-     * @param  {number} startY startY of screenshot
-     * @param  {number} width  width of screenshot
-     * @param  {number} height height of screenshot
-     * @return {object}        canvas
+     * [img2canvas description]
+     * @param  {[type]} image        [description]
+     * @param  {[type]} domStartX    [description]
+     * @param  {[type]} domStartY    [description]
+     * @param  {[type]} domW         [description]
+     * @param  {[type]} domH         [description]
+     * @param  {[type]} canvasStartX [description]
+     * @param  {[type]} canvasStartY [description]
+     * @param  {[type]} canvasW      [description]
+     * @param  {[type]} canvasH      [description]
+     * @return {[type]}              [description]
      */
-    img2canvas: function(image, startX, startY, width, height) {
+    img2canvas: function(image, domStartX, domStartY, domW, domH, canvasStartX, canvasStartY, canvasW, canvasH) {
         const canvas = document.createElement('canvas');
         canvas.width = width;
         canvas.height = height;
-        canvas.getContext('2d').drawImage(image, startX, startY, width, height, 0, 0, width, height);
+        canvas.getContext('2d').drawImage(image, domStartX, domStartY, domW, domH, 0, 0, canvasW, canvasH);
 
         return canvas;
     }

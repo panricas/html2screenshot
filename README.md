@@ -11,6 +11,8 @@ The html2screenshot library utilizes Promises and expects them to be available i
 html2screenshot(document.body, {
     startX: 0,
     startY: 0,
+    canvasW: 100,
+    canvasH: 200,
     background: '#fff',
     imageType: 'png',
     imageQuality: 1.0
@@ -30,6 +32,10 @@ html2screenshot(document.body, {
 `startX` of the element you wanna screenshot, default 0.
 ### startY
 `startY` of the element you wanna screenshot, default 0.
+### canvasW
+`canvasW` is the width of screenshot.
+### canvasH
+`canvasH` is the height of screenshot.
 ### background
 `background` of screenshot, default '#fff'.
 ### imageType
