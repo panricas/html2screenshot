@@ -36,8 +36,8 @@ module.exports = {
      */
     img2canvas: function(image, domStartX, domStartY, domW, domH, canvasStartX, canvasStartY, canvasW, canvasH) {
         const canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
+        canvas.width = canvasW;
+        canvas.height = canvasH;
         canvas.getContext('2d').drawImage(image, domStartX, domStartY, domW, domH, 0, 0, canvasW, canvasH);
 
         return canvas;
