@@ -22,10 +22,10 @@ function html2img(dom, options, cb) {
 
     html2canvas(dom, {
         background: options.background || '#fff',
-    }).then((canvas) => {
+    }).then(function(canvas) {
         var img = utils.canvas2img(canvas, canvas2imgOptions);
 
-        img.onload = () => {
+        img.onload = function() {
             img.onload = null;
             var newCanvas = utils.img2canvas(
                 img, startX, startY, domW, domH, 0, 0, canvasW, canvasH);
