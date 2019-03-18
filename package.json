@@ -1,6 +1,6 @@
 {
     "name": "html2screenshot",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Generate a screenshot of the page with javascript.",
     "author": "panricas <panfei909909@gmail.com>",
     "keywords": [
